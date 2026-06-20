@@ -1,136 +1,398 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Swat's Stock — #1 Robux Marketplace</title>
-
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swat's Stock — Premium Robux Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- NAV -->
-<header class="nav">
-  <div class="nav-inner">
-    
-    <div class="brand">
-      <img src="assets/logo.png" class="logo" alt="Swat's Stock"/>
-      <span>Swat's Stock</span>
-    </div>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar" role="navigation">
+        <div class="nav-inner">
+            <a href="#" class="brand" aria-label="Swat's Stock home" data-nav="home">
+                <span class="logo-mark">S</span>
+                <span class="logo-text">Swat's Stock</span>
+            </a>
 
-    <div class="links">
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#payments">Payments</a>
-      <a href="#contact">Contact</a>
-    </div>
+            <nav class="nav-links">
+                <a href="#" data-nav="home" class="active">Home</a>
+                <a href="#" data-nav="pricing">Pricing</a>
+                <a href="#" data-nav="faq">FAQ</a>
+                <a href="#" data-nav="contact">Contact</a>
+            </nav>
 
-    <a class="btn primary" href="https://discord.gg/UYV6YJCeet">
-      Join Discord
-    </a>
+            <div class="nav-actions">
+                <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                    Join Discord
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
 
-  </div>
-</header>
+        <!-- mobile nav -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#" data-nav="home" class="active">Home</a>
+            <a href="#" data-nav="pricing">Pricing</a>
+            <a href="#" data-nav="faq">FAQ</a>
+            <a href="#" data-nav="contact">Contact</a>
+            <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" style="color:var(--neon);font-weight:600;">Join Discord →</a>
+        </div>
+    </header>
 
-<!-- HERO -->
-<section class="hero">
+    <!-- ===== PAGE: HOME ===== -->
+    <section class="page-section active" id="page-home">
 
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
+        <!-- HERO -->
+        <div class="hero" id="home">
+            <div class="hero-bg">
+                <div class="grid"></div>
+                <div class="glow"></div>
+            </div>
 
-  <!-- animated stock line -->
-  <svg class="stock" viewBox="0 0 1200 400">
-    <path class="line"
-      d="M0,280 L120,270 L240,290 L360,240 L480,250 L600,200 L720,210 L840,160 L960,170 L1080,120 L1200,140"
-    />
-  </svg>
+            <!-- animated stock chart -->
+            <div class="stock-chart" aria-hidden="true">
+                <svg viewBox="0 0 1200 300" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#39ff14" stop-opacity="0.35" />
+                            <stop offset="100%" stop-color="#39ff14" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                    <path class="area"
+                    d="M0,240 L80,220 L160,235 L240,190 L320,205 L400,165 L480,180 L560,140 L640,155 L720,115 L800,130 L880,90 L960,105 L1040,70 L1120,85 L1200,50 L1200,300 L0,300 Z"
+                    />
+                    <path class="line"
+                    d="M0,240 L80,220 L160,235 L240,190 L320,205 L400,165 L480,180 L560,140 L640,155 L720,115 L800,130 L880,90 L960,105 L1040,70 L1120,85 L1200,50"
+                    />
+                </svg>
+            </div>
 
-  <div class="hero-content">
+            <div class="hero-content">
+                <div class="hero-pills">
+                    <span class="pill green"><span class="dot"></span> Live stock — instant delivery</span>
+                    <span class="pill">⭐ 2,000+ Vouches</span>
+                </div>
 
-    <div class="pill-row">
-      <span class="pill green">● Live Stock</span>
-      <span class="pill">Instant Delivery</span>
-      <span class="pill">2,000+ Vouches</span>
-    </div>
+                <h1>
+                    The Premium <br />
+                    <span class="highlight">Robux Marketplace</span>
+                </h1>
 
-    <h1>
-      The #1 Trusted<br/>
-      <span class="neon">Robux Marketplace</span>
-    </h1>
+                <p class="sub">
+                    Flat-rate Robux at <b>$2.50 / 1,000</b>.
+                    Crypto and PayPal accepted. Orders fulfilled directly through our Discord.
+                </p>
 
-    <p>
-      Buy Robux instantly at <b>$2.50 per 1,000</b>.<br/>
-      Fast delivery, no scams, handled fully through Discord.
-    </p>
+                <div class="hero-actions">
+                    <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                        Join Discord to Buy
+                        <span style="transition:transform 0.2s;display:inline-block;">→</span>
+                    </a>
+                    <a href="#" data-nav="pricing" class="btn btn-secondary btn-lg">
+                        See Pricing
+                    </a>
+                </div>
 
-    <div class="cta">
-      <a href="https://discord.gg/UYV6YJCeet" class="btn primary">
-        Buy via Discord
-      </a>
-      <a href="#pricing" class="btn ghost">
-        View Pricing
-      </a>
-    </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="number">$2.50</span>
+                        <span class="label">Per 1K</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">2K+</span>
+                        <span class="label">Vouches</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">&lt;5m</span>
+                        <span class="label">Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="stats">
-      <div><b>$2.50</b><span>PER 1K</span></div>
-      <div><b>2K+</b><span>VOUCHES</span></div>
-      <div><b>&lt;5 MIN</b><span>DELIVERY</span></div>
-    </div>
+        <!-- PAYMENTS -->
+        <section class="section">
+            <div class="container text-center">
+                <p class="section-label">Accepted Payments</p>
+                <h2 class="section-title">Pay your way</h2>
+                <div class="payments-grid">
+                    <div class="payment-item"><span class="pm-icon">₿</span> Bitcoin</div>
+                    <div class="payment-item"><span class="pm-icon">Ξ</span> Ethereum</div>
+                    <div class="payment-item"><span class="pm-icon">Ł</span> Litecoin</div>
+                    <div class="payment-item"><span class="pm-icon">🪙</span> Monero</div>
+                    <div class="payment-item"><span class="pm-icon">💳</span> Visa</div>
+                    <div class="payment-item"><span class="pm-icon">💳</span> Mastercard</div>
+                    <div class="payment-item"><span class="pm-icon">🅿️</span> PayPal</div>
+                    <div class="payment-item"><span class="pm-icon">⛓️</span> All Chains</div>
+                </div>
+                <p class="payment-note">All payments processed securely via Discord ticket system.</p>
+            </div>
+        </section>
 
-  </div>
-</section>
+        <!-- FEATURES -->
+        <section class="section section-dark" id="features">
+            <div class="container text-center">
+                <p class="section-label">Why Swat's Stock</p>
+                <h2 class="section-title">Built for serious buyers</h2>
+                <p class="section-sub">We don't cut corners. Fast, reliable, and backed by a community that trusts us.</p>
 
-<!-- FEATURES -->
-<section id="features" class="section">
-  <h2>Why people choose us</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="icon">⚡</span>
+                        <h3>Instant Delivery</h3>
+                        <p>Robux drops in your account within minutes of payment confirmation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">🛡️</span>
+                        <h3>Trusted Seller</h3>
+                        <p>Hundreds of completed orders. Reputation backed by our community.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">💰</span>
+                        <h3>Best Rates</h3>
+                        <p>Flat $2.50 per 1,000 Robux. No hidden fees, no inflated pricing.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon">💬</span>
+                        <h3>24/7 Support</h3>
+                        <p>Reach us anytime on Discord — real humans, fast replies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="grid">
-    <div class="card">⚡ Instant Delivery</div>
-    <div class="card">🔒 Trusted Reputation</div>
-    <div class="card">💰 Best Market Rate</div>
-    <div class="card">💬 24/7 Discord Support</div>
-  </div>
-</section>
+        <!-- CTA -->
+        <section class="cta-block">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Ready to stock up?</h2>
+                    <p>Hop into the Discord, drop your order, get your Robux. It's that simple.</p>
+                    <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                        Join Discord →
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<!-- PAYMENTS -->
-<section id="payments" class="section dark">
-  <h2>We accept all major payments</h2>
+    </section>
 
-  <div class="payments">
-    <div class="pay">💳 Visa</div>
-    <div class="pay">💳 Mastercard</div>
-    <div class="pay">🅿️ PayPal</div>
-    <div class="pay">₿ Bitcoin</div>
-    <div class="pay">Ξ Ethereum</div>
-    <div class="pay">Ł Litecoin</div>
-    <div class="pay">🪙 Monero</div>
-    <div class="pay">💸 Crypto (All Chains)</div>
-  </div>
+    <!-- ===== PAGE: PRICING ===== -->
+    <section class="page-section" id="page-pricing">
+        <div class="section" style="padding-top:120px;">
+            <div class="container text-center">
+                <p class="section-label">Pricing</p>
+                <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,3.4rem);">
+                    One flat rate. <span class="text-neon">$2.50 / 1K.</span>
+                </h1>
+                <p class="section-sub">
+                    No tiered scams. No inflated fees. Pay only what the Robux costs — and get it instantly.
+                </p>
 
-  <p class="muted">
-    All orders are processed securely via Discord ticket system.
-  </p>
-</section>
+                <div class="pricing-showcase">
+                    <div class="pricing-card">
+                        <div class="amount">1,000</div>
+                        <div class="price">$2.50</div>
+                        <div class="desc">Perfect for a starter boost.</div>
+                        <ul class="perks">
+                            <li><span class="check">✓</span> Instant Discord checkout</li>
+                            <li><span class="check">✓</span> Crypto &amp; PayPal accepted</li>
+                            <li><span class="check">✓</span> Trusted seller — verified history</li>
+                        </ul>
+                        <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top:18px;width:100%;">
+                            Order on Discord
+                        </a>
+                    </div>
 
-<!-- CTA -->
-<section id="contact" class="cta-box">
-  <h2>Ready to get Robux?</h2>
-  <p>Join Discord and place your order instantly.</p>
-  <a class="btn primary" href="https://discord.gg/UYV6YJCeet">
-    Join Discord
-  </a>
+                    <div class="pricing-card popular">
+                        <div class="amount">5,000</div>
+                        <div class="price">$12.50</div>
+                        <div class="desc">Our most popular pack.</div>
+                        <ul class="perks">
+                            <li><span class="check">✓</span> Instant Discord checkout</li>
+                            <li><span class="check">✓</span> Crypto &amp; PayPal accepted</li>
+                            <li><span class="check">✓</span> Live order tracking</li>
+                            <li><span class="check">✓</span> Trusted seller — verified history</li>
+                        </ul>
+                        <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:18px;width:100%;">
+                            Order on Discord
+                        </a>
+                    </div>
 
-  <a class="tiktok" href="https://www.tiktok.com/@swatsstock" target="_blank">
-    @swatsstock on TikTok
-  </a>
-</section>
+                    <div class="pricing-card">
+                        <div class="amount">10,000</div>
+                        <div class="price">$25.00</div>
+                        <div class="desc">Serious stock for serious players.</div>
+                        <ul class="perks">
+                            <li><span class="check">✓</span> Instant Discord checkout</li>
+                            <li><span class="check">✓</span> Crypto &amp; PayPal accepted</li>
+                            <li><span class="check">✓</span> Trusted seller — verified history</li>
+                        </ul>
+                        <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top:18px;width:100%;">
+                            Order on Discord
+                        </a>
+                    </div>
+                </div>
 
-<footer>
-  <p>© 2026 Swat's Stock — Not affiliated with Roblox Corporation</p>
-</footer>
+                <!-- custom order -->
+                <div class="glass" style="max-width:600px;margin:40px auto 0;padding:24px;border-radius:var(--radius);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+                    <div style="text-align:left;">
+                        <h3 style="font-weight:600;font-size:1.1rem;">Custom order?</h3>
+                        <p style="color:var(--muted-foreground);font-size:0.9rem;">Need 25K, 100K, or something specific? DM us on Discord.</p>
+                    </div>
+                    <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-primary" style="flex-shrink:0;">
+                        Request a Quote
+                    </a>
+                </div>
 
-<script src="app.js"></script>
+                <!-- payments -->
+                <div style="margin-top:60px;">
+                    <p class="section-label">Accepted Payments</p>
+                    <div class="payments-grid" style="max-width:600px;">
+                        <div class="payment-item"><span class="pm-icon">₿</span> Bitcoin</div>
+                        <div class="payment-item"><span class="pm-icon">Ξ</span> Ethereum</div>
+                        <div class="payment-item"><span class="pm-icon">Ł</span> Litecoin</div>
+                        <div class="payment-item"><span class="pm-icon">🪙</span> Monero</div>
+                        <div class="payment-item"><span class="pm-icon">🅿️</span> PayPal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAGE: FAQ ===== -->
+    <section class="page-section" id="page-faq">
+        <div class="section" style="padding-top:120px;">
+            <div class="container" style="max-width:720px;">
+                <div class="text-center">
+                    <p class="section-label">FAQ</p>
+                    <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,3.4rem);">Questions, answered.</h1>
+                </div>
+
+                <div class="glass" style="padding:8px 16px;border-radius:var(--radius);margin-top:32px;">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-trigger open">
+                                How do I buy Robux?
+                                <span class="arrow">▾</span>
+                            </button>
+                            <div class="accordion-content open">
+                                All orders happen inside our Discord server. Click <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noreferrer">Join Discord</a>, open a ticket, tell us the amount, send payment, and we'll deliver your Robux.
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                How long does delivery take?
+                                <span class="arrow">▾</span>
+                            </button>
+                            <div class="accordion-content">
+                                Most orders are delivered within 5 minutes of payment confirmation. Larger custom orders may take a little longer — we'll always give you an ETA.
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                What payment methods do you accept?
+                                <span class="arrow">▾</span>
+                            </button>
+                            <div class="accordion-content">
+                                Bitcoin, Ethereum, Litecoin, Monero, and PayPal. Crypto is preferred and processed fastest.
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                Is PayPal accepted?
+                                <span class="arrow">▾</span>
+                            </button>
+                            <div class="accordion-content">
+                                Yes — PayPal is fully supported. Goods &amp; Services is available for buyer protection.
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                What is your refund policy?
+                                <span class="arrow">▾</span>
+                            </button>
+                            <div class="accordion-content">
+                                Refunds are available if we cannot fulfill your order or if there is a verifiable issue on our end. Contact us through Discord and we'll resolve it — every case is reviewed individually.
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">
+                                Is this legit?
+                                <span class="arrow">▾</span>
+                            </button>
+                            <div class="accordion-content">
+                                Yes. We've completed hundreds of orders with a public reputation in our Discord. We're not affiliated with Roblox Corporation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top:32px;">
+                    <p style="color:var(--muted-foreground);">Still have questions?</p>
+                    <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:12px;">
+                        Ask us on Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAGE: CONTACT ===== -->
+    <section class="page-section" id="page-contact">
+        <div class="section" style="padding-top:120px;">
+            <div class="container" style="max-width:820px;">
+                <div class="text-center">
+                    <p class="section-label">Contact</p>
+                    <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,3.4rem);">Talk to us directly.</h1>
+                    <p class="section-sub">We don't hide behind email forms. Reach us where we actually live.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <a href="https://discord.gg/UYV6YJCeet" target="_blank" rel="noopener" class="contact-card">
+                        <div class="icon-wrap">💬</div>
+                        <h3>Discord</h3>
+                        <div class="handle">discord.gg/UYV6YJCeet</div>
+                        <p class="desc">Primary channel. Place orders, ask questions, get support 24/7.</p>
+                        <span class="cta-label">Join Server →</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@swatsstock" target="_blank" rel="noopener" class="contact-card">
+                        <div class="icon-wrap">🎵</div>
+                        <h3>TikTok</h3>
+                        <div class="handle">@swatsstock</div>
+                        <p class="desc">Follow for drops, reviews, and live stock updates.</p>
+                        <span class="cta-label">Follow →</span>
+                    </a>
+                </div>
+
+                <div class="refund-box">
+                    <h3>Refund policy</h3>
+                    <p>Refunds are available on a case-by-case basis when we cannot fulfill your order or there's a verified issue on our end. Open a Discord ticket and we'll handle it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="brand-small">
+                <span>Swat's Stock</span>
+                <span class="dot"></span>
+                <span style="font-weight:400;color:#5a5a5a;">Premium Robux Marketplace</span>
+            </div>
+            <p>© 2026 Swat's Stock. All rights reserved. — Not affiliated with Roblox Corporation.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
