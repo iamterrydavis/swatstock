@@ -41,7 +41,7 @@
     --glass-border: 1px solid rgba(255, 255, 255, 0.06);
     --shadow-card: 0 20px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
 
-    --font: 'Inter', system-ui, -apple-system, sans-serif;
+    --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -98,7 +98,7 @@ ul {
 }
 
 /* ============================================================
-   UTILITY CLASSES (mirror Tailwind utilities)
+   UTILITY CLASSES
    ============================================================ */
 .text-neon {
     color: var(--neon);
@@ -361,7 +361,7 @@ ul {
    ============================================================ */
 .hero {
     position: relative;
-    padding: 140px 0 80px;
+    padding: 140px 0 100px; /* increased bottom padding to avoid overlap */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -700,7 +700,7 @@ ul {
    ============================================================ */
 .payments-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 12px;
     max-width: 780px;
     margin: 0 auto 20px;
@@ -726,8 +726,10 @@ ul {
     transform: translateY(-2px);
 }
 .payment-item .pm-icon {
-    font-size: 1.2rem;
-    line-height: 1;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: currentColor;
 }
 
 .payment-note {
@@ -788,6 +790,7 @@ ul {
     padding: 40px 0 28px;
     border-top: 1px solid var(--border);
     text-align: center;
+    margin-top: 0; /* ensure no extra margin causing overlap */
 }
 .footer p {
     font-size: 0.8rem;
@@ -989,7 +992,7 @@ ul {
     }
 
     .hero {
-        padding: 120px 0 60px;
+        padding: 120px 0 80px;
         min-height: auto;
     }
     .hero-stats .stat {
