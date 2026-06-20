@@ -250,22 +250,12 @@ ul {
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #fff;
     flex-shrink: 0;
 }
 .brand .logo-img {
-    height: 32px;
+    height: 38px;
     width: auto;
     display: block;
-}
-.brand .logo-text {
-    background: linear-gradient(135deg, #fff 40%, var(--neon));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .nav-links {
@@ -420,12 +410,23 @@ ul {
     padding: 0 20px;
 }
 
+.hero-logo {
+    margin-bottom: 20px;
+    animation: float-up 0.8s ease-out 0.05s both;
+}
+.hero-logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .hero-pills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     animation: float-up 0.8s ease-out both;
 }
 .hero-pills .pill {
@@ -718,10 +719,9 @@ ul {
     transform: translateY(-2px);
 }
 .payment-item .pm-icon {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     flex-shrink: 0;
-    color: currentColor;
 }
 
 .payment-note {
@@ -759,20 +759,6 @@ ul {
 .cta-card p {
     color: var(--muted-foreground);
     margin-bottom: 24px;
-}
-.cta-card .tiktok-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-    color: var(--muted-foreground);
-    font-size: 0.9rem;
-    transition: color 0.2s, border-color 0.2s;
-    border-bottom: 1px solid transparent;
-}
-.cta-card .tiktok-link:hover {
-    color: var(--neon);
-    border-bottom-color: var(--neon);
 }
 
 /* ============================================================
@@ -987,6 +973,9 @@ ul {
         padding: 120px 0 80px;
         min-height: auto;
     }
+    .hero-logo img {
+        height: 44px;
+    }
     .hero-stats .stat {
         min-width: 80px;
         padding: 10px 14px;
@@ -1032,14 +1021,14 @@ ul {
         width: 100%;
         justify-content: center;
     }
+    .hero-logo img {
+        height: 36px;
+    }
     .nav-inner {
         height: 60px;
         padding: 0 16px;
     }
-    .brand .logo-text {
-        font-size: 0.95rem;
-    }
     .brand .logo-img {
-        height: 28px;
+        height: 32px;
     }
 }
